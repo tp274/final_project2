@@ -80,4 +80,12 @@ class accountsController extends http\controller
 
     }
 
+    public static function delete()
+    {
+        $record = todos::findOne($_REQUEST['id']);
+        $record->delete();
+        //print_r($_POST);
+        header("Location: index.php?page=accoungts&action=all");
+    }
+
 }
