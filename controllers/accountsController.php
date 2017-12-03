@@ -83,7 +83,7 @@ class accountsController extends http\controller
     public static function delete()
     {
         $record = accounts::findOne($_REQUEST['id']);
-	$record->delete();
+	    $record->delete();
         header("Location: index.php?page=accounts&action=all");
     }
 
