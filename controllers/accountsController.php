@@ -54,6 +54,7 @@ class accountsController extends http\controller
     //this is the function to save the user the user profile
     public static function store()
     {
+        echo "In save";
         print_r($_POST);
 
     }

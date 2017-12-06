@@ -113,6 +113,28 @@ class routes
         $routes[] = $route;
 
         return $routes;
+
+        //Added route to edit an account
+        $route = new route();
+        $route->http_method = 'POST';
+        $route->action = 'edit';
+        $route->page = 'accounts';
+        $route->controller = 'accountsController';
+        $route->method = 'edit';
+        $routes[] = $route;
+
+        return $routes;
+
+        //Added route to add/update an account
+        $route = new route();
+        $route->http_method = 'POST';
+        $route->action = 'store';
+        $route->page = 'accounts';
+        $route->controller = 'accountsController';
+        $route->method = 'store';
+        $routes[] = $route;
+
+        return $routes;
     }
 }
 
